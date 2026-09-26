@@ -1,1 +1,320 @@
-Página Web fea de Javier
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f3f1e9">
+	<meta name="description" content="Conoce a Javier Córdova Figueroa y visita su perfil profesional en LinkedIn.">
+	<title>Javier Córdova Figueroa | Sitio personal</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			color-scheme: light;
+			--paper: #f3f1e9;
+			--ink: #18332d;
+			--muted: #626c62;
+			--lime: #d3ed67;
+			--coral: #df7259;
+			--line: rgba(24, 51, 45, .18);
+			--sans: "DM Sans", sans-serif;
+			--serif: "Playfair Display", Georgia, serif;
+		}
+
+		* { box-sizing: border-box; }
+
+		html { scroll-behavior: smooth; }
+
+		body {
+			margin: 0;
+			color: var(--ink);
+			background-color: var(--paper);
+			background-image: linear-gradient(rgba(24, 51, 45, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(24, 51, 45, .025) 1px, transparent 1px);
+			background-size: 32px 32px;
+			font-family: var(--sans);
+			-webkit-font-smoothing: antialiased;
+		}
+
+		a { color: inherit; }
+
+		.wrap {
+			width: min(1180px, calc(100% - 64px));
+			margin-inline: auto;
+		}
+
+		.site-header {
+			min-height: 88px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.brand {
+			display: inline-flex;
+			align-items: center;
+			gap: 12px;
+			text-decoration: none;
+			font-size: 14px;
+			font-weight: 700;
+		}
+
+		.brand-mark {
+			display: grid;
+			width: 38px;
+			aspect-ratio: 1;
+			place-items: center;
+			background: var(--lime);
+			border-radius: 50%;
+			font-family: var(--serif);
+			font-size: 16px;
+		}
+
+		.header-link {
+			display: inline-flex;
+			align-items: center;
+			gap: 9px;
+			padding: 10px 0;
+			text-decoration: none;
+			font-size: 13px;
+			font-weight: 600;
+		}
+
+		.header-link svg, .button svg { width: 16px; height: 16px; }
+
+		.hero {
+			display: grid;
+			grid-template-columns: 1fr .88fr;
+			gap: clamp(44px, 8vw, 112px);
+			align-items: center;
+			padding-block: clamp(68px, 10vw, 132px) clamp(78px, 11vw, 144px);
+		}
+
+		.eyebrow {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			margin: 0 0 24px;
+			color: var(--muted);
+			font-size: 11px;
+			font-weight: 700;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+		}
+
+		.eyebrow::before {
+			width: 23px;
+			height: 2px;
+			background: var(--coral);
+			content: "";
+		}
+
+		h1, h2, p { margin-top: 0; }
+
+		h1 {
+			max-width: 620px;
+			margin-bottom: 22px;
+			font-family: var(--serif);
+			font-size: clamp(48px, 6.3vw, 82px);
+			font-weight: 500;
+			line-height: 1.06;
+		}
+
+		h1 span { color: var(--coral); }
+
+		.hero-copy {
+			max-width: 435px;
+			margin-bottom: 32px;
+			color: var(--muted);
+			font-size: 16px;
+			line-height: 1.75;
+		}
+
+		.button {
+			display: inline-flex;
+			min-height: 52px;
+			align-items: center;
+			justify-content: center;
+			gap: 12px;
+			padding: 0 20px;
+			border: 1px solid var(--ink);
+			background: var(--ink);
+			color: var(--paper);
+			font-size: 13px;
+			font-weight: 700;
+			text-decoration: none;
+			transition: background-color .2s ease, color .2s ease, transform .2s ease;
+		}
+
+		.button:hover { transform: translateY(-2px); background: transparent; color: var(--ink); }
+		a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+
+		.hero-visual {
+			position: relative;
+			min-height: 430px;
+			isolation: isolate;
+		}
+
+		.photo-frame {
+			position: absolute;
+			inset: 0 25px 28px 0;
+			overflow: hidden;
+			background: #d1d5c2;
+		}
+
+		.photo-frame::after {
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(180deg, transparent 54%, rgba(24, 51, 45, .28));
+			content: "";
+		}
+
+		.photo-frame img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			animation: arrive 1s ease both;
+		}
+
+		.visual-note {
+			position: absolute;
+			z-index: 1;
+			right: 0;
+			bottom: 0;
+			width: min(235px, 72%);
+			padding: 22px 24px;
+			background: var(--lime);
+		}
+
+		.visual-note strong {
+			display: block;
+			margin-bottom: 7px;
+			font-family: var(--serif);
+			font-size: 20px;
+			font-weight: 600;
+		}
+
+		.visual-note span { color: #48533b; font-size: 12px; }
+
+		.intro {
+			padding-block: 38px 42px;
+			border-top: 1px solid var(--line);
+			border-bottom: 1px solid var(--line);
+		}
+
+		.intro-inner {
+			display: grid;
+			grid-template-columns: .7fr 1.3fr;
+			gap: 48px;
+			align-items: start;
+		}
+
+		.intro h2 {
+			margin: 0;
+			font-family: var(--serif);
+			font-size: 25px;
+			font-weight: 500;
+		}
+
+		.intro p {
+			max-width: 620px;
+			margin: 0;
+			color: var(--muted);
+			font-size: 15px;
+			line-height: 1.8;
+		}
+
+		.site-footer {
+			display: flex;
+			min-height: 94px;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+			color: var(--muted);
+			font-size: 12px;
+		}
+
+		.footer-link { color: var(--ink); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+		@keyframes arrive {
+			from { opacity: 0; transform: scale(1.035); }
+			to { opacity: 1; transform: scale(1); }
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			*, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+		}
+
+		@media (max-width: 760px) {
+			.wrap { width: min(100% - 40px, 560px); }
+			.site-header { min-height: 74px; }
+			.brand { font-size: 12px; }
+			.brand-mark { width: 34px; }
+			.header-link { font-size: 12px; }
+			.hero { grid-template-columns: 1fr; gap: 42px; padding-block: 68px 76px; }
+			h1 { max-width: 540px; font-size: clamp(48px, 13vw, 68px); }
+			.hero-visual { min-height: 360px; }
+			.photo-frame { inset: 0 19px 24px 0; }
+			.intro-inner { grid-template-columns: 1fr; gap: 16px; }
+			.site-footer { min-height: 82px; }
+		}
+
+		@media (max-width: 420px) {
+			.wrap { width: calc(100% - 32px); }
+			.header-link { gap: 5px; font-size: 11px; }
+			.hero-visual { min-height: 300px; }
+			.visual-note { padding: 17px 18px; }
+			.site-footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-block: 20px; }
+		}
+	</style>
+</head>
+<body>
+	<header class="site-header wrap">
+		<a class="brand" href="#inicio" aria-label="Javier Córdova Figueroa, inicio">
+			<span class="brand-mark" aria-hidden="true">JC</span>
+			<span>Javier Córdova Figueroa</span>
+		</a>
+		<a class="header-link" href="https://www.linkedin.com/in/javiercordovafigueroa/" target="_blank" rel="noopener noreferrer">
+			LinkedIn
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+		</a>
+	</header>
+
+	<main>
+		<section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+			<div class="hero-content">
+				<p class="eyebrow">Perfil personal</p>
+				<h1 id="hero-title">Javier<br>Córdova <span>Figueroa</span></h1>
+				<p class="hero-copy">Un espacio personal para conectar y conocer mi recorrido profesional.</p>
+				<a class="button" href="https://www.linkedin.com/in/javiercordovafigueroa/" target="_blank" rel="noopener noreferrer">
+					Visitar mi LinkedIn
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+				</a>
+			</div>
+			<div class="hero-visual" aria-label="Espacio de trabajo">
+				<div class="photo-frame">
+					<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Espacio de trabajo luminoso con una mesa preparada para trabajar" fetchpriority="high">
+				</div>
+				<div class="visual-note">
+					<strong>Hola, soy Javier.</strong>
+					<span>Gracias por pasar por aquí.</span>
+				</div>
+			</div>
+		</section>
+
+		<section class="intro" aria-labelledby="intro-title">
+			<div class="intro-inner wrap">
+				<h2 id="intro-title">Conectemos</h2>
+				<p>Para conocer más sobre mi experiencia y trayectoria, visita mi perfil profesional. También puedes escribirme directamente por LinkedIn.</p>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer wrap">
+		<span>© 2026 Javier Córdova Figueroa</span>
+		<a class="footer-link" href="https://www.linkedin.com/in/javiercordovafigueroa/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+	</footer>
+</body>
+</html>
