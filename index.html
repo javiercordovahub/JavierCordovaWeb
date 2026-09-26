@@ -3,8 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#f3f1e9">
-	<meta name="description" content="Conoce a Javier Córdova Figueroa y visita su perfil profesional en LinkedIn.">
+	<meta name="theme-color" content="#f5f7f8">
+	<meta name="description" content="Javier Córdova Figueroa: liderazgo en seguridad de la información y ciberseguridad, con más de 10 años de experiencia en entornos corporativos. Enfoque en oportunidades en España.">
+	<meta property="og:title" content="Javier Córdova Figueroa | Seguridad de la Información">
+	<meta property="og:description" content="Liderazgo en seguridad de la información, gobierno, riesgos y ciberseguridad. Experiencia corporativa con proyección en España.">
+	<meta property="og:type" content="profile">
 	<title>Javier Córdova Figueroa | Sitio personal</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +15,13 @@
 	<style>
 		:root {
 			color-scheme: light;
-			--paper: #f3f1e9;
-			--ink: #18332d;
-			--muted: #626c62;
-			--lime: #d3ed67;
-			--coral: #df7259;
-			--line: rgba(24, 51, 45, .18);
+			--paper: #f5f7f8;
+			--ink: #142b3a;
+			--muted: #586a76;
+			--lime: #dcf16c;
+			--coral: #e5684e;
+			--line: rgba(20, 43, 58, .16);
+			--white: #fff;
 			--sans: "DM Sans", sans-serif;
 			--serif: "Playfair Display", Georgia, serif;
 		}
@@ -30,8 +34,8 @@
 			margin: 0;
 			color: var(--ink);
 			background-color: var(--paper);
-			background-image: linear-gradient(rgba(24, 51, 45, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(24, 51, 45, .025) 1px, transparent 1px);
-			background-size: 32px 32px;
+			background-image: linear-gradient(rgba(20, 43, 58, .025) 1px, transparent 1px);
+			background-size: 100% 36px;
 			font-family: var(--sans);
 			-webkit-font-smoothing: antialiased;
 		}
@@ -81,14 +85,18 @@
 			font-weight: 600;
 		}
 
+		.site-nav { display: flex; align-items: center; gap: 26px; }
+		.site-nav a { color: var(--muted); font-size: 12px; text-decoration: none; }
+		.site-nav a:hover { color: var(--ink); }
+
 		.header-link svg, .button svg { width: 16px; height: 16px; }
 
 		.hero {
 			display: grid;
-			grid-template-columns: 1fr .88fr;
-			gap: clamp(44px, 8vw, 112px);
+			grid-template-columns: 1fr .82fr;
+			gap: clamp(44px, 7vw, 96px);
 			align-items: center;
-			padding-block: clamp(68px, 10vw, 132px) clamp(78px, 11vw, 144px);
+			padding-block: clamp(58px, 7vw, 92px) clamp(72px, 9vw, 112px);
 		}
 
 		.eyebrow {
@@ -116,7 +124,7 @@
 			max-width: 620px;
 			margin-bottom: 22px;
 			font-family: var(--serif);
-			font-size: clamp(48px, 6.3vw, 82px);
+			font-size: clamp(48px, 6vw, 76px);
 			font-weight: 500;
 			line-height: 1.06;
 		}
@@ -124,7 +132,7 @@
 		h1 span { color: var(--coral); }
 
 		.hero-copy {
-			max-width: 435px;
+			max-width: 520px;
 			margin-bottom: 32px;
 			color: var(--muted);
 			font-size: 16px;
@@ -152,21 +160,24 @@
 
 		.hero-visual {
 			position: relative;
-			min-height: 430px;
+			width: 100%;
+			max-width: 480px;
+			aspect-ratio: .84;
+			justify-self: end;
 			isolation: isolate;
 		}
 
 		.photo-frame {
 			position: absolute;
-			inset: 0 25px 28px 0;
+			inset: 0 24px 28px 0;
 			overflow: hidden;
-			background: #d1d5c2;
+			background: #d9dfe2;
 		}
 
 		.photo-frame::after {
 			position: absolute;
 			inset: 0;
-			background: linear-gradient(180deg, transparent 54%, rgba(24, 51, 45, .28));
+			background: linear-gradient(180deg, transparent 62%, rgba(20, 43, 58, .2));
 			content: "";
 		}
 
@@ -174,7 +185,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			object-position: center;
+			object-position: center 28%;
 			animation: arrive 1s ease both;
 		}
 
@@ -186,6 +197,7 @@
 			width: min(235px, 72%);
 			padding: 22px 24px;
 			background: var(--lime);
+			box-shadow: 0 12px 32px rgba(20, 43, 58, .12);
 		}
 
 		.visual-note strong {
@@ -196,7 +208,7 @@
 			font-weight: 600;
 		}
 
-		.visual-note span { color: #48533b; font-size: 12px; }
+		.visual-note span { color: #364a36; font-size: 12px; }
 
 		.intro {
 			padding-block: 38px 42px;
@@ -226,6 +238,66 @@
 			line-height: 1.8;
 		}
 
+		.results {
+			padding-block: 56px 62px;
+			background: var(--ink);
+			color: var(--paper);
+		}
+
+		.section-kicker {
+			margin-bottom: 12px;
+			color: var(--coral);
+			font-size: 11px;
+			font-weight: 700;
+			letter-spacing: 1.4px;
+			text-transform: uppercase;
+		}
+
+		.section-title {
+			margin-bottom: 34px;
+			font-family: var(--serif);
+			font-size: clamp(30px, 4vw, 42px);
+			font-weight: 500;
+		}
+
+		.results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+		.result { padding-top: 20px; border-top: 1px solid rgba(243, 241, 233, .3); }
+		.result strong { display: block; margin-bottom: 10px; color: var(--lime); font-family: var(--serif); font-size: 38px; font-weight: 500; }
+		.result p { max-width: 290px; margin: 0; color: rgba(243, 241, 233, .78); font-size: 13px; line-height: 1.7; }
+
+		.career, .formation, .teaching { padding-block: 80px; }
+		.career { border-bottom: 1px solid var(--line); }
+		.career-list { border-top: 1px solid var(--line); }
+		.career-item {
+			display: grid;
+			grid-template-columns: 130px minmax(190px, .9fr) 1.2fr;
+			gap: 28px;
+			padding: 24px 0;
+			border-bottom: 1px solid var(--line);
+		}
+		.career-date { color: var(--muted); font-size: 12px; }
+		.career-role { margin: 0 0 5px; font-size: 15px; font-weight: 700; }
+		.career-company { color: var(--coral); font-size: 13px; font-weight: 600; }
+		.career-item p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+
+		.formation { background: rgba(255, 254, 250, .7); }
+		.formation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+		.formation h3 { margin: 0 0 20px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+		.formation-list { margin: 0; padding: 0; list-style: none; }
+		.formation-list li { padding: 15px 0; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.6; }
+		.formation-list span { display: block; color: var(--muted); font-size: 12px; }
+
+		.teaching { border-top: 1px solid var(--line); }
+		.teaching-row { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; padding-top: 24px; border-top: 1px solid var(--line); }
+		.teaching-row h3 { margin: 0 0 7px; font-size: 15px; }
+		.teaching-row p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+		.contact { padding-block: 44px; background: var(--lime); }
+		.contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+		.contact h2 { margin: 0; font-family: var(--serif); font-size: 30px; font-weight: 500; }
+		.contact-links { display: flex; flex-wrap: wrap; gap: 22px; }
+		.contact-links a { font-size: 13px; font-weight: 700; text-underline-offset: 4px; }
+
 		.site-footer {
 			display: flex;
 			min-height: 94px;
@@ -253,19 +325,32 @@
 			.brand { font-size: 12px; }
 			.brand-mark { width: 34px; }
 			.header-link { font-size: 12px; }
-			.hero { grid-template-columns: 1fr; gap: 42px; padding-block: 68px 76px; }
+			.site-nav { gap: 12px; }
+			.site-nav a { font-size: 11px; }
+			.hero { grid-template-columns: 1fr; gap: 42px; padding-block: 62px 72px; }
 			h1 { max-width: 540px; font-size: clamp(48px, 13vw, 68px); }
-			.hero-visual { min-height: 360px; }
+			.hero-visual { width: min(100%, 430px); aspect-ratio: .9; justify-self: center; }
 			.photo-frame { inset: 0 19px 24px 0; }
 			.intro-inner { grid-template-columns: 1fr; gap: 16px; }
+			.results-grid { grid-template-columns: 1fr; gap: 24px; }
+			.career-item { grid-template-columns: 95px 1fr; gap: 10px 20px; }
+			.career-item p { grid-column: 2; }
+			.formation-grid { gap: 36px; }
+			.teaching-row { gap: 24px; }
 			.site-footer { min-height: 82px; }
 		}
 
 		@media (max-width: 420px) {
 			.wrap { width: calc(100% - 32px); }
 			.header-link { gap: 5px; font-size: 11px; }
-			.hero-visual { min-height: 300px; }
+			.site-nav { display: none; }
+			.hero-visual { width: 100%; aspect-ratio: .88; }
 			.visual-note { padding: 17px 18px; }
+			.career, .formation, .teaching { padding-block: 58px; }
+			.career-item { grid-template-columns: 1fr; gap: 8px; }
+			.career-item p { grid-column: auto; }
+			.formation-grid { grid-template-columns: 1fr; gap: 34px; }
+			.contact-inner { align-items: flex-start; flex-direction: column; }
 			.site-footer { align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-block: 20px; }
 		}
 	</style>
@@ -276,38 +361,110 @@
 			<span class="brand-mark" aria-hidden="true">JC</span>
 			<span>Javier Córdova Figueroa</span>
 		</a>
-		<a class="header-link" href="https://www.linkedin.com/in/javiercordovafigueroa/" target="_blank" rel="noopener noreferrer">
-			LinkedIn
-			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-		</a>
+		<nav class="site-nav" aria-label="Navegación principal">
+			<a href="#trayectoria">Trayectoria</a>
+			<a href="#formacion">Formación</a>
+			<a class="header-link" href="https://www.linkedin.com/in/javiercordovafigueroa/" target="_blank" rel="noopener noreferrer">LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+		</nav>
 	</header>
 
 	<main>
 		<section class="hero wrap" id="inicio" aria-labelledby="hero-title">
 			<div class="hero-content">
-				<p class="eyebrow">Perfil personal</p>
+				<p class="eyebrow">Liderazgo en ciberseguridad · Entornos corporativos</p>
 				<h1 id="hero-title">Javier<br>Córdova <span>Figueroa</span></h1>
-				<p class="hero-copy">Un espacio personal para conectar y conocer mi recorrido profesional.</p>
-				<a class="button" href="https://www.linkedin.com/in/javiercordovafigueroa/" target="_blank" rel="noopener noreferrer">
-					Visitar mi LinkedIn
+				<p class="hero-copy"><strong>Seguridad de la información y ciberseguridad con visión de negocio.</strong><br>Líder con más de 10 años de experiencia en servicios financieros, retail y consumo masivo. Especializado en gobierno, estrategia, gestión de riesgos y transformación de programas de seguridad. Interesado en aportar esta experiencia a organizaciones corporativas en España.</p>
+				<a class="button" href="mailto:javier507563@gmail.com?subject=Oportunidad%20profesional%20en%20Espa%C3%B1a%20%7C%20Javier%20C%C3%B3rdova">
+					Hablemos de una oportunidad
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
 				</a>
 			</div>
-			<div class="hero-visual" aria-label="Espacio de trabajo">
+			<div class="hero-visual">
 				<div class="photo-frame">
-					<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Espacio de trabajo luminoso con una mesa preparada para trabajar" fetchpriority="high">
+					<img src="Javier%20C%C3%B3rdova.jpg" alt="Javier Córdova Figueroa, profesional de seguridad de la información y ciberseguridad" fetchpriority="high">
 				</div>
 				<div class="visual-note">
-					<strong>Hola, soy Javier.</strong>
-					<span>Gracias por pasar por aquí.</span>
+					<strong>Seguridad con impacto</strong>
+					<span>Gobierno · Riesgo · Resiliencia</span>
 				</div>
 			</div>
 		</section>
 
 		<section class="intro" aria-labelledby="intro-title">
 			<div class="intro-inner wrap">
-				<h2 id="intro-title">Conectemos</h2>
-				<p>Para conocer más sobre mi experiencia y trayectoria, visita mi perfil profesional. También puedes escribirme directamente por LinkedIn.</p>
+				<h2 id="intro-title">Ciberseguridad al servicio del negocio</h2>
+				<p>Impulso modelos de gobierno y programas de seguridad conectados con la estrategia corporativa. He liderado iniciativas de riesgo, privacidad y transformación tecnológica en organizaciones complejas, integrando la seguridad en las decisiones del negocio y en operaciones regionales.</p>
+			</div>
+		</section>
+
+		<section class="results" aria-labelledby="results-title">
+			<div class="wrap">
+				<p class="section-kicker">Impacto profesional</p>
+				<h2 class="section-title" id="results-title">Resultados que fortalecen la confianza</h2>
+				<div class="results-grid">
+					<div class="result"><strong>10+ años</strong><p>De experiencia en seguridad de la información y ciberseguridad en sectores regulados y de consumo.</p></div>
+					<div class="result"><strong>+400%</strong><p>De aumento en la capacitación interna en ciberseguridad, mediante un programa de cultura y concienciación.</p></div>
+					<div class="result"><strong>100%</strong><p>De reducción de los riesgos altos identificados en protección de datos personales en Grupo BVL.</p></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="career wrap" id="trayectoria" aria-labelledby="career-title">
+			<p class="section-kicker">Experiencia</p>
+			<h2 class="section-title" id="career-title">Trayectoria profesional</h2>
+			<div class="career-list">
+				<article class="career-item"><span class="career-date">2025 – 2026</span><div><h3 class="career-role">Jefe de Gobierno de Seguridad y Ciberseguridad</h3><span class="career-company">Alicorp S.A.A.</span></div><p>Liderazgo corporativo de GRC para Alicorp y sus subsidiarias. Diseño del modelo de gobierno e integración de seguridad para nuevas adquisiciones.</p></article>
+				<article class="career-item"><span class="career-date">2025</span><div><h3 class="career-role">Jefe de Seguridad de la Información</h3><span class="career-company">Pandero S.A. E.A.F.C.</span></div><p>Fortalecimiento de la gobernanza y liderazgo de un área de ciberseguridad; actualización del roadmap, gestión de riesgos y programa de cultura.</p></article>
+				<article class="career-item"><span class="career-date">2022 – 2024</span><div><h3 class="career-role">Oficial de Seguridad de la Información</h3><span class="career-company">Cavali S.A. I.C.L.V. · Grupo BVL</span></div><p>Lideró la certificación ISO 27001:2022, programas regionales de ciberseguridad y privacidad, y la reducción de riesgos altos de datos personales.</p></article>
+				<article class="career-item"><span class="career-date">2021 – 2022</span><div><h3 class="career-role">Jefe de Seguridad de la Información</h3><span class="career-company">Intercorp Management S.A.C.</span></div><p>Liderazgo de seguridad para Supermercados Peruanos; impulsó capacidades de detección y respuesta con XDR y la migración de protección de endpoints a la nube.</p></article>
+				<article class="career-item"><span class="career-date">2020 – 2021</span><div><h3 class="career-role">Jefe de Seguridad de la Información</h3><span class="career-company">Makro Supermayorista S.A.</span></div><p>Liderazgo de seguridad de la información para Makro Perú y alineamiento con estándares internacionales del grupo SHV.</p></article>
+				<article class="career-item"><span class="career-date">2017 – 2019</span><div><h3 class="career-role">Administrador de Seguridad de la Información</h3><span class="career-company">La Positiva Vida S.A.</span></div><p>Liderazgo del equipo de gobierno y seguridad corporativa; desarrollo de metodologías de ciberriesgo y asesoría en proyectos de seguridad.</p></article>
+				<article class="career-item"><span class="career-date">2015 – 2016</span><div><h3 class="career-role">Analista de Seguridad de la Información</h3><span class="career-company">Interseguro Compañía de Seguros S.A.</span></div><p>Experiencia en análisis y gestión de seguridad de la información.</p></article>
+				<article class="career-item"><span class="career-date">2013 – 2014</span><div><h3 class="career-role">Consultor de Seguridad de la Información</h3><span class="career-company">MCD Consulting S.A.C.</span></div><p>Consultoría en seguridad de la información.</p></article>
+			</div>
+		</section>
+
+		<section class="formation" id="formacion" aria-labelledby="formation-title">
+			<div class="formation-grid wrap">
+				<div>
+					<p class="section-kicker">Formación</p>
+					<h2 class="section-title" id="formation-title">Estudios</h2>
+					<ul class="formation-list">
+						<li>Máster en Ciberseguridad<span>Universidad Internacional de La Rioja · 2024</span></li>
+						<li>Ingeniería de Sistemas de Información<span>Universidad Peruana de Ciencias Aplicadas · 2013</span></li>
+						<li>Diplomado en Gestión de Seguridad de la Información<span>SGS Academy · 2016</span></li>
+					</ul>
+				</div>
+				<div>
+					<p class="section-kicker">Especialización</p>
+					<h2 class="section-title">Certificaciones y cursos</h2>
+					<ul class="formation-list">
+						<li>Auditor Líder ISO 27001:2022<span>2024</span></li>
+						<li>Certified in Cybersecurity (CC) · ISC2<span>2024</span></li>
+						<li>CRISC · ISO 31000 · ISO 27005 · ISO 27701<span>Cursos realizados entre 2023 y 2024</span></li>
+						<li>Lead Cybersecurity Professional Certificate (LCSPC)<span>2020</span></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="teaching wrap" aria-labelledby="teaching-title">
+			<p class="section-kicker">Docencia</p>
+			<h2 class="section-title" id="teaching-title">Compartir conocimiento</h2>
+			<div class="teaching-row">
+				<h3>Escuela de Formación Profesional Ingenium</h3>
+				<p>Diseño y dictado del Programa de Especialización en Derecho de Protección de Datos y Ciberseguridad. Varias ediciones desde 2025.</p>
+			</div>
+		</section>
+
+		<section class="contact" aria-labelledby="contact-title">
+			<div class="contact-inner wrap">
+				<div><h2 id="contact-title">¿Hablamos de ciberseguridad?</h2><p>Disponible para conversar sobre retos de seguridad en organizaciones corporativas en España.</p></div>
+				<div class="contact-links">
+					<a href="mailto:javier507563@gmail.com?subject=Oportunidad%20profesional%20en%20Espa%C3%B1a%20%7C%20Javier%20C%C3%B3rdova">Escríbeme por correo</a>
+					<a href="tel:+51992829451">+51 992 829 451</a>
+					<a href="https://www.linkedin.com/in/javiercordovafigueroa/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+				</div>
 			</div>
 		</section>
 	</main>
